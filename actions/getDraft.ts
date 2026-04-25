@@ -10,7 +10,7 @@ export const PreviewDraftAction: DocumentActionComponent = (props) => {
   const base =
     process.env.NODE_ENV == 'development'
       ? 'http://localhost:3000/preview'
-      : 'https://elizabethroberts.netlify.app/preview'
+      : 'https://elizabethroberts.com/preview'
 
   if (!hasDraft) {
     return null
@@ -32,9 +32,7 @@ export const PreviewDraftAction: DocumentActionComponent = (props) => {
 export const PreviewPublishedAction: DocumentActionComponent = (props) => {
   const hasPublished = !!props.published
   const base =
-    process.env.NODE_ENV == 'development'
-      ? 'http://localhost:3000'
-      : 'https://elizabethroberts.netlify.app'
+    process.env.NODE_ENV == 'development' ? 'http://localhost:3000' : 'https://elizabethroberts.com'
 
   if (!hasPublished) {
     return null
